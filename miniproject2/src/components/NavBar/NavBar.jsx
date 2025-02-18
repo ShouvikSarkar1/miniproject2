@@ -9,7 +9,7 @@ const NavBar = () => {
   const {currentUser} = useUserContext(); 
   const {theme} = useContext(MyThemeContext)
   return (
-    <nav className='NavBar' style={{backgroundColor: theme.background, color: theme.foreground}}>
+    <nav className='NavBar'>
         <ul>
             <li><NavLink to ='/'>Home</NavLink></li>
             <li><NavLink to ='/signup'>Sign Up</NavLink></li>            
