@@ -1,13 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
-import { MyThemeContext } from '../../context/MyThemeContext'
 import { useUserContext } from '../../context/UserContext'
 import Logout from '../Logout/Logout'
 
 const NavBar = () => {
   const {currentUser} = useUserContext(); 
-  const {theme} = useContext(MyThemeContext)
   return (
     <nav className='NavBar'>
         <ul>

@@ -1,12 +1,13 @@
 import React from 'react'
 import '../styles/HomePageStyles.css'
+import HomePageFeatures from '../components/HomePage/HomePageFeatures'
+import HomePageGif from '../components/HomePage/HomePageGif'
 
 
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <h1>Home Page</h1>
-      
+      <HomePageFeatures/>
     </div>
   )
 }

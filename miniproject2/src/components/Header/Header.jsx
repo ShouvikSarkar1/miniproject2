@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../Logo/Logo'
 import HeaderLogin from '../HeaderLogin/HeaderLogin'
-import '../../styles/Header.css'
+import '../../App.css'
 
 const Header = () => {
     return (  
