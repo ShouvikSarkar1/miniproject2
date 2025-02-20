@@ -1,23 +1,22 @@
-import React, {useContext, useState} from 'react';
+import { createContext, useContext, useState } from "react";
 
-// Create Context
-export const UserContext = React.createContext();
+const UserContext = createContext();
 
-export const UserProvider = (props) => {
-    const [currentUser, setCurrentUser] = useState({});
+export const UserProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState({
+    email: "",
+    profilePicture: "https://via.placeholder.com/100", // Default profile pic
+  });
 
-    const handleUpdateUser = (newUser) => {
-        setCurrentUser(newUser)
-    }
+  const handleUpdateUser = (userData) => {
+    setCurrentUser((prev) => ({ ...prev, ...userData }));
+  };
 
-    return (
-        <UserContext.Provider value ={{currentUser, handleUpdateUser}}>
-            {props.children}
-        </UserContext.Provider>
-    )
-}
+  return (
+    <UserContext.Provider value={{ currentUser, handleUpdateUser }}>
+      {children}
+    </UserContext.Provider>
+  );
+};
 
-// Create Custom Hook
-export const useUserContext = () =>{
-    return useContext(UserContext);
-}
+export const useUserContext = () => useContext(UserContext);
