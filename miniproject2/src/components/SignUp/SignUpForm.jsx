@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Card, CardContent, CardHeader, TextField, Button, Typography, MenuItem, Select, FormControl, InputLabel, Alert } from '@mui/material';
+import { Card, CardContent, TextField, Button, Typography, MenuItem, Select, FormControl, InputLabel, Alert } from '@mui/material';
 
 export default function SignupForm() {
   const {
@@ -40,7 +40,9 @@ export default function SignupForm() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <Card sx={{ maxWidth: 700, p: 3 , textAlign: 'center', border: '2px solid #ff7b00'}}>
-        <CardHeader title="Sign Up" />
+              <Typography variant="h4" component="h1" gutterBottom>
+                Sign Up
+              </Typography>
         <CardContent>
           {successMessage && <Alert severity="success">{successMessage}</Alert>}
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
