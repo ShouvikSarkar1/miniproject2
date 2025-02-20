@@ -1,14 +1,22 @@
 import React from 'react'
 import '../styles/HomePageStyles.css'
 import HomePageFeatures from '../components/HomePage/HomePageFeatures'
-import HomePageGif from '../components/HomePage/HomePageGif'
+import HomePagePhoto from '../components/HomePage/HomePagePhoto'
+import Testimonies from '../components/HomePage/Testimonies'
 
 
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <HomePageGif/>
-      <HomePageFeatures/>
+      <div className='homepage-content'>
+        <div className='homepage-photo'>
+          <HomePagePhoto/>
+        </div>
+        <HomePageFeatures/>
+      </div>
+      <div className='testimonial componentBox'>
+        <Testimonies/>
+      </div>
     </div>
   )
 }
