@@ -27,7 +27,6 @@
 .login {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 10px;
 }
@@ -36,13 +35,14 @@
 .login-input {
   display: flex;
   gap: 10px;
+
 }
 
 /* Input fields */
 .login-input input {
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #ff7b00;
   outline: none;
 }
 
@@ -80,6 +80,7 @@
   grid-template-rows: 1fr auto;
   min-height: 100vh;
   margin-top: 185px;
+  justify-content: center;
 }
 footer a:hover{
   color:#ff7b00;

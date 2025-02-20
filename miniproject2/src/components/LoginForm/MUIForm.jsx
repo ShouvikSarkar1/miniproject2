@@ -48,7 +48,19 @@ export default function MUIForm() {
     <Box
       component="form"
       onSubmit={handleSubmit}
-      sx={{ p: 4, backgroundColor: theme.background, color: theme.foreground }}
+      sx={{
+        p: 4,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center", 
+        justifyContent: "center", 
+        maxHeight: "450px",
+        minWidth: '450px',
+        backgroundColor: theme.background, 
+        color: theme.foreground,
+        borderRadius: '5px',
+        border: "2px solid #ff7b00"
+      }}
     >
       <Typography variant="h4" component="h1" gutterBottom>
         Login
@@ -71,7 +83,7 @@ export default function MUIForm() {
         onChange={(e) => setUserPassword(e.target.value)}
         margin="normal"
       />
-      <Button type="submit" variant="contained" color="primary" fullWidth sx={{mt:2}}>Login</Button>
+      <Button type="submit" variant="contained" color="primary" fullWidth sx={{mt:2, backgroundColor: '#ff7b00'}}>Login</Button>
       {submitResult && (
         <Alert severity={isLoggedIn ? 'Success' : 'error'} sx={{mt:2}}>{submitResult}</Alert>
       )}

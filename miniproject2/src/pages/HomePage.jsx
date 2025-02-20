@@ -7,6 +7,7 @@ import HomePageGif from '../components/HomePage/HomePageGif'
 const HomePage = () => {
   return (
     <div className='HomePage'>
+      <HomePageGif/>
       <HomePageFeatures/>
     </div>
   )
