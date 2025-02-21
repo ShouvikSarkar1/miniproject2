@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const Calendar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
 
   const handleAddToCalendar = () => {
     const url =
@@ -19,9 +18,6 @@ const Calendar = () => {
     );
   };
 
-  const handleSearch = () => {
-    alert("Searching for: " + searchQuery); // Replace with actual search functionality
-  };
 
   return (
     <div className="calendar">
